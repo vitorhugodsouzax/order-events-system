@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS orders (
+  id UUID PRIMARY KEY,
+  items JSONB NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
